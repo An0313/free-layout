@@ -25,7 +25,14 @@
 ```less
 @import "@ahg0313/free-layout/src/css/media.less";
 
+// 变量
+@xs-max-size: 768px;
+@sm-max-size: 992px;
+@md-max-size: 1200px;
+@lg-max-size: 1920px;
+
 .className {
+  // 方法
   .xs({
     background: red;
   });

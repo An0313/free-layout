@@ -1,6 +1,6 @@
 {
   "name": "@ahg0313/free-layout",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "将网页改为响应式, 支持 vue、 react",
   "main": "index.js",
   "scripts": {
