@@ -1,0 +1,176 @@
+
+@import "../../css/media";
+
+@n-default: 24;
+.fl-col {
+  box-sizing: border-box;
+}
+
+.setSpan(@n: @n-default, @i: 1) when (@i =< @n) {
+  .fl-col-span-@{i} {
+    flex: 0 0 (@i / @n * 100%);
+  }
+  .setSpan(@n, (@i + 1));
+}
+
+
+.setOffset(@n: @n-default, @i: 1) when (@i =< @n) {
+  .fl-col-offset-@{i} {
+    margin-left: (@i / @n * 100%);
+  }
+  .setOffset(@n, (@i + 1));
+}
+
+
+.setPush(@n: @n-default, @i: 1) when (@i =< @n) {
+  .fl-col-push-@{i} {
+    position: relative;
+    left: (@i / @n * 100%);
+  }
+  .setPush(@n, (@i + 1));
+}
+
+
+.setPull(@n: @n-default, @i: 1) when (@i =< @n) {
+  .fl-col-pull-@{i} {
+    position: relative;
+    right: (@i / @n * 100%);
+  }
+  .setPull(@n, (@i + 1));
+}
+
+
+.setSize(@n: @n-default, @i: 1) when (@i =< @n) {
+  .fl-col-xl-@{i} {
+    position: relative;
+    right: (@i / @n * 100%);
+  }
+  .setSize(@n, (@i + 1));
+}
+
+.setPull();
+.setPush();
+.setOffset();
+.setSpan();
+
+
+.setSize(@n: @n-default, @i: 1) when (@i =< @n) {
+  .fl-col-xs-@{i} {
+    .xs({
+      flex: 0 0 (@i / @n * 100%);
+    });
+
+    .sm({
+      flex: 0 0 (@i / @n * 100%);
+    });
+
+    .md({
+      flex: 0 0 (@i / @n * 100%);
+    });
+
+    .lg({
+      flex: 0 0 (@i / @n * 100%);
+    });
+
+    .xl({
+      flex: 0 0 (@i / @n * 100%);
+    });
+  }
+  .fl-col-xs-offset-@{i} {
+    .xs({
+      margin-left: (@i / @n * 100%);
+    });
+
+    .sm({
+      margin-left: (@i / @n * 100%);
+    });
+
+    .md({
+      margin-left: (@i / @n * 100%);
+    });
+
+    .lg({
+      margin-left: (@i / @n * 100%);
+    });
+
+    .xl({
+      margin-left: (@i / @n * 100%);
+    });
+  }
+  .fl-col-xs-push-@{i} {
+    .xs({
+      position: relative;
+      left: (@i / @n * 100%);
+    });
+
+    .sm({
+      position: relative;
+      left: (@i / @n * 100%);
+    });
+
+    .md({
+      position: relative;
+      left: (@i / @n * 100%);
+    });
+
+    .lg({
+      position: relative;
+      left: (@i / @n * 100%);
+    });
+
+    .xl({
+      position: relative;
+      left: (@i / @n * 100%);
+    });
+  }
+  .fl-col-xs-offset-@{i} {
+    .xs({
+      margin-left: (@i / @n * 100%);
+    });
+
+    .sm({
+      margin-left: (@i / @n * 100%);
+    });
+
+    .md({
+      margin-left: (@i / @n * 100%);
+    });
+
+    .lg({
+      margin-left: (@i / @n * 100%);
+    });
+
+    .xl({
+      margin-left: (@i / @n * 100%);
+    });
+  }
+  .fl-col-xs-pull-@{i} {
+    .xs({
+      position: relative;
+      right: (@i / @n * 100%);
+    });
+
+    .sm({
+      position: relative;
+      right: (@i / @n * 100%);
+    });
+
+    .md({
+      position: relative;
+      right: (@i / @n * 100%);
+    });
+
+    .lg({
+      position: relative;
+      right: (@i / @n * 100%);
+    });
+
+    .xl({
+      position: relative;
+      right: (@i / @n * 100%);
+    });
+  }
+
+}
+
+.setSize();

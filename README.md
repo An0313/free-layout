@@ -172,7 +172,9 @@ export default {
 import {FlRow, FlCol} from '@ahg0313/free-layout/vue'
 ```
 react
-> 待开发
+```jsx
+import {FlRow, FlCol} from '@ahg0313/free-layout/react'
+```
 
 
 [//]: # (![]&#40;Layout.png&#41;)

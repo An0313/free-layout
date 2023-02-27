@@ -49,25 +49,14 @@ export default defineComponent({
         alignItems: align,
       }
       if (gutter) {
-
-
         const m = `-${gutter / 2}px`
         style.marginLeft = m
         style.marginRight = m
       }
-
-      console.log('style', style)
 
       return style
     }
   }
 })
 </script>
-<style scoped lang="less">
-.fl-row {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  box-sizing: border-box;
-}
-</style>
+<style scoped lang="less" src="./row.less"></style>
