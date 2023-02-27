@@ -2,16 +2,51 @@
 
 将网页改为响应式
 
-## 全局属性
+## 样式
+### 断点的隐藏类
+与 [Element-ui](https://element-plus.org/zh-CN/component/layout.html#%E5%9F%BA%E4%BA%8E%E6%96%AD%E7%82%B9%E7%9A%84%E9%9A%90%E8%97%8F%E7%B1%BB) 保持一致
+```
+@import "@ahg0313/free-layout/css/display.less";
+```
 
-|属性名|说明|类型|默认值|
-|:-|:-:|:-:|-:|
-|hidden|隐藏 `dispaly: none`|`object`|{xs: false, sm: false, md: false, lg: false, xl: false}|
-|order|排列顺序。数值越小，排列越靠前。flex布局的order属性|`number`|0|
+* `hidden-xs-only` - 当视口在 `xs` 尺寸时隐藏
+* `hidden-sm-only` - 当视口在 `sm` 尺寸时隐藏
+* `hidden-sm-and-down` - 当视口在 `sm` 及以下尺寸时隐藏
+* `hidden-sm-and-up` - 当视口在 `sm` 及以上尺寸时隐藏
+* `hidden-md-only` - 当视口在 `md` 尺寸时隐藏
+* `hidden-md-and-down` - 当视口在 `md` 及以下尺寸时隐藏
+* `hidden-md-and-up` - 当视口在 `md` 及以上尺寸时隐藏
+* `hidden-lg-only` - 当视口在 `lg` 尺寸时隐藏
+* `hidden-lg-and-down` - 当视口在 `lg` 及以下尺寸时隐藏
+* `hidden-lg-and-up` - 当视口在 `lg` 及以上尺寸时隐藏
+* `hidden-xl-only` - 当视口在 `xl` 尺寸时隐藏
 
-> 实现方式：
-> vue 通过 [自定义全局指令](https://cn.vuejs.org/guide/reusability/custom-directives.html#introduction)
-> react
+### 媒体查询
+```less
+@import "@ahg0313/free-layout/src/css/media.less";
+
+.className {
+  .xs({
+    background: red;
+  });
+  
+  .sm({
+    background: #000;
+  });
+  
+  .md({
+    background: white;
+  });
+  
+  .lg({
+    background: gray;
+  });
+  
+  .xl({
+    background: green;
+  });
+}
+```
 
 ## 容器组件
 
@@ -36,7 +71,7 @@
 
 ### 例子
 
-![](container.png)
+[//]: # (![]&#40;container.png&#41;)
 
 ```html
 
@@ -123,12 +158,11 @@
 </div>
 ```
 
-![](Layout.png)
+[//]: # (![]&#40;Layout.png&#41;)
 
 ### 属性
 
 不支持`tag`属性，其他与`ElementUI Layout` 组件保持保持一致
-
 
 ### 珊格系统
 

@@ -1,0 +1,67 @@
+@import "./media";
+
+@media only screen and (max-width: @xs-max-size - 1) {
+  .hidden-xs-only {
+    display: none !important
+  }
+}
+
+@media only screen and (min-width: @xs-max-size) {
+  .hidden-sm-and-up {
+    display: none !important
+  }
+}
+
+@media only screen and (min-width: @xs-max-size) and (max-width: @sm-max-size - 1) {
+  .hidden-sm-only {
+    display: none !important
+  }
+}
+
+@media only screen and (max-width: @sm-max-size - 1) {
+  .hidden-sm-and-down {
+    display: none !important
+  }
+}
+
+@media only screen and (min-width: @sm-max-size ) {
+  .hidden-md-and-up {
+    display: none !important
+  }
+}
+
+@media only screen and (min-width: @sm-max-size ) and (max-width: @md-max-size - 1) {
+  .hidden-md-only {
+    display: none !important
+  }
+}
+
+@media only screen and (max-width: @md-max-size - 1) {
+  .hidden-md-and-down {
+    display: none !important
+  }
+}
+
+@media only screen and (min-width: @md-max-size) {
+  .hidden-lg-and-up {
+    display: none !important
+  }
+}
+
+@media only screen and (min-width: @md-max-size) and (max-width: @lg-max-size - 1) {
+  .hidden-lg-only {
+    display: none !important
+  }
+}
+
+@media only screen and (max-width: @lg-max-size - 1) {
+  .hidden-lg-and-down {
+    display: none !important
+  }
+}
+
+@media only screen and (min-width: @lg-max-size) {
+  .hidden-xl-only {
+    display: none !important
+  }
+}
