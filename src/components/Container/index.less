@@ -1,0 +1,14 @@
+.fl-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-basis: auto;
+
+  & > div {
+    box-sizing: border-box;
+  }
+
+  &.vertical {
+    flex-direction: column;
+  }
+}

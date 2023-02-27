@@ -4,10 +4,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import {defineComponent} from 'vue'
+<script>
 
-export default defineComponent({
+export default {
   name: 'FlContainer',
   props: {
     direction: {
@@ -20,18 +19,6 @@ export default defineComponent({
       return this.$props.direction === 'vertical'
     }
   }
-})
-</script>
-<style scoped lang="less">
-.fl-container {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  flex-basis: auto;
-  box-sizing: border-box;
-
-  &.vertical {
-    flex-direction: column;
-  }
 }
-</style>
+</script>
+<style scoped lang="less" src="index.less"></style>

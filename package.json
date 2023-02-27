@@ -21,6 +21,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "element-plus": "^2.2.32"
+    "element-plus": "^2.2.32",
+    "react": "^18.2.0"
   }
 }

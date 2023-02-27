@@ -4,10 +4,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import {defineComponent} from 'vue'
-
-export default defineComponent({
+<script>
+export default {
   name: 'FlAside',
   props: {
     width: {
@@ -15,10 +13,6 @@ export default defineComponent({
       default: 'auto'
     }
   }
-})
-</script>
-<style scoped lang="less">
-.fl-aside {
-  box-sizing: border-box;
 }
-</style>
+</script>
+

@@ -93,12 +93,12 @@ element可将每行划分为24个分栏，而bootstrap是划分为12个分栏，
 ```html
 
 <fl-container>
-    <fl-aside>Aside</fl-aside>
+    <fl-aside width="200px">Aside</fl-aside>
     <fl-container>
-        <fl-header>Header</fl-header>
+        <fl-header heihgt="200px">Header</fl-header>
         <fl-nav>Nav</fl-nav>
         <fl-main>Main</fl-main>
-        <fl-footer>Footer</fl-footer>
+        <fl-footer height="300px">Footer</fl-footer>
     </fl-container>
 </fl-container>
 ```
@@ -117,7 +117,9 @@ export default {
 import {FlContainer, FlAside, FlHeader, FlMain, FlFooter, FlNav} from '@ahg0313/free-layout/vue'
 ```
 react
-> 待开发
+```jsx
+import {FlContainer, FlAside, FlHeader, FlMain, FlFooter, FlNav} from '@ahg0313/free-layout/react'
+```
 
 ### 属性
 
@@ -132,44 +134,6 @@ react
 ```html
 
 <div>
-    <fl-row>
-        <fl-col :span="24">
-            <div/>
-        </fl-col>
-    </fl-row>
-    <fl-row>
-        <fl-col :span="12">
-            <div/>
-        </fl-col>
-        <fl-col :span="12">
-            <div/>
-        </fl-col>
-    </fl-row>
-    <fl-row>
-        <fl-col :span="8">
-            <div/>
-        </fl-col>
-        <fl-col :span="8">
-            <div/>
-        </fl-col>
-        <fl-col :span="8">
-            <div/>
-        </fl-col>
-    </fl-row>
-    <fl-row>
-        <fl-col :span="6">
-            <div/>
-        </fl-col>
-        <fl-col :span="6">
-            <div/>
-        </fl-col>
-        <fl-col :span="6">
-            <div/>
-        </fl-col>
-        <fl-col :span="6">
-            <div/>
-        </fl-col>
-    </fl-row>
     <fl-row>
         <fl-col :span="4">
             <div/>
