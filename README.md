@@ -1,12 +1,12 @@
 # @ahg0313/free-layout 布局组件
 
-将网页改为响应式
+将网页改为响应式，支持 vue、 react
 
 ## 样式
 ### 断点的隐藏类
 与 [Element-ui](https://element-plus.org/zh-CN/component/layout.html#%E5%9F%BA%E4%BA%8E%E6%96%AD%E7%82%B9%E7%9A%84%E9%9A%90%E8%97%8F%E7%B1%BB) 保持一致
 ```
-@import "@ahg0313/free-layout/css/display.less";
+@import "@ahg0313/free-layout/src/css/display.less";
 ```
 
 * `hidden-xs-only` - 当视口在 `xs` 尺寸时隐藏
@@ -48,6 +48,23 @@
 }
 ```
 
+### 珊格系统
+
+参考 [ElementUI Layout 布局](https://element-plus.org/zh-CN/component/layout.html)
+、[Bootstrap 珊格系统](https://v4.bootcss.com/docs/layout/grid/)
+
+将网页划分成若干行，然后每行等分为若干列，基于这样的方式进行布局，形象的成为栅栏布局。
+
+element可将每行划分为24个分栏，而bootstrap是划分为12个分栏，从使用角度，还是24个分栏更加精细。
+
+|属性|像素|
+|:-|-:|
+|xs|< 768px|
+|sm|>= 768px|
+|md|>= 992px|
+|lg|>= 1200px|
+|xl|>= 1920px|
+
 ## 容器组件
 
 参考 `HTML语义化标签` 与 [ElementUI Container 布局容器](https://element-plus.org/zh-CN/component/container.html)
@@ -85,12 +102,30 @@
     </fl-container>
 </fl-container>
 ```
+vue
+```vue
+// vue2
+import {FlContainer, FlAside, FlHeader, FlMain, FlFooter, FlNav} from '@ahg0313/free-layout/vue'
+
+
+export default {
+  //...,
+  components: {FlContainer, FlAside, FlHeader, FlMain, FlFooter, FlNav}
+}
+
+// vue3
+import {FlContainer, FlAside, FlHeader, FlMain, FlFooter, FlNav} from '@ahg0313/free-layout/vue'
+```
+react
+> 待开发
 
 ### 属性
 
 与`ElementUI Container` 组件保持保持一致
 
+
 # 布局
+参考 [Element-ui Layout 布局](https://element-plus.org/zh-CN/component/layout.html), 与 `element-ui row col` 保持一致
 
 通过 `fl-row` 和 `fl-col` 组件，并通过  `fl-col` 组件的 `span` 属性我们就可以自由地组合布局。
 
@@ -139,44 +174,45 @@
         <fl-col :span="4">
             <div/>
         </fl-col>
-        <fl-col :span="4">
+        <fl-col :push="4">
             <div/>
         </fl-col>
-        <fl-col :span="4">
+        <fl-col :pull="4">
             <div/>
         </fl-col>
-        <fl-col :span="4">
+        <fl-col :offset="4">
             <div/>
         </fl-col>
-        <fl-col :span="4">
+        <fl-col :xs="4">
             <div/>
         </fl-col>
-        <fl-col :span="4">
+        <fl-col :xl="{span: 4, push: 4, pull: 4, offset: 4}">
             <div/>
         </fl-col>
     </fl-row>
 </div>
 ```
 
+vue
+```vue
+// vue2
+import {FlRow, FlCol} from '@ahg0313/free-layout/vue'
+
+
+export default {
+  //...,
+  components: {FlRow, FlCol}
+}
+
+// vue3
+import {FlRow, FlCol} from '@ahg0313/free-layout/vue'
+```
+react
+> 待开发
+
+
 [//]: # (![]&#40;Layout.png&#41;)
 
 ### 属性
 
 不支持`tag`属性，其他与`ElementUI Layout` 组件保持保持一致
-
-### 珊格系统
-
-参考 [ElementUI Layout 布局](https://element-plus.org/zh-CN/component/layout.html)
-、[Bootstrap 珊格系统](https://v4.bootcss.com/docs/layout/grid/)
-
-将网页划分成若干行，然后每行等分为若干列，基于这样的方式进行布局，形象的成为栅栏布局。
-
-element可将每行划分为24个分栏，而bootstrap是划分为12个分栏，从使用角度，还是24个分栏更加精细。
-
-|属性|像素|
-|:-|-:|
-|xs|< 768px|
-|sm|>= 768px|
-|md|>= 992px|
-|lg|>= 1200px|
-|xl|>= 1920px|
