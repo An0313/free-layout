@@ -1,0 +1,29 @@
+.xs(@rules) {
+  @media only screen and (max-width: 768px) {
+    @rules();
+  }
+}
+
+.sm(@rules) {
+  @media only screen and (min-width: 768px) {
+    @rules();
+  }
+}
+
+.md(@rules) {
+  @media only screen and (min-width: 992px) {
+    @rules();
+  }
+}
+
+.lg(@rules) {
+  @media only screen and (min-width: 1200px) {
+    @rules();
+  }
+}
+
+.xl(@rules) {
+  @media only screen and (min-width: 1920px) {
+    @rules();
+  }
+}
