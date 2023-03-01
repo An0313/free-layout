@@ -38,15 +38,6 @@
   .setPull(@n, (@i + 1));
 }
 
-
-//.setSize(@n: @n-default, @i: 1) when (@i =< @n) {
-//  .fl-col-xl-@{i} {
-//    position: relative;
-//    right: (@i / @n * 100%);
-//  }
-//  .setSize(@n, (@i + 1));
-//}
-
 .setPull();
 .setPush();
 .setOffset();
@@ -116,22 +107,30 @@
       position: relative;
       left: (@i / @n * 100%);
     });
+  }
 
+  .fl-col-sm-push-@{i} {
     .sm({
       position: relative;
       left: (@i / @n * 100%);
     });
+  }
 
+  .fl-col-md-push-@{i} {
     .md({
       position: relative;
       left: (@i / @n * 100%);
     });
+  }
 
+  .fl-col-lg-push-@{i} {
     .lg({
       position: relative;
       left: (@i / @n * 100%);
     });
+  }
 
+  .fl-col-xl-push-@{i} {
     .xl({
       position: relative;
       left: (@i / @n * 100%);
