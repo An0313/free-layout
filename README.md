@@ -72,7 +72,12 @@ element可将每行划分为24个分栏，而bootstrap是划分为12个分栏，
 |lg|>= 1200px|
 |xl|>= 1920px|
 
-## 容器组件
+<br/>
+<br/>
+<br/>
+
+## 组件
+### 容器组件
 
 参考 `HTML语义化标签` 与 [ElementUI Container 布局容器](https://element-plus.org/zh-CN/component/container.html)
 组件，快速搭建页面基本结构
@@ -93,7 +98,7 @@ element可将每行划分为24个分栏，而bootstrap是划分为12个分栏，
 > 以上组件采用了 flex 布局，使用前请确定目标浏览器是否兼容。 此外， `<fl-container>` 的直接子元素必须是后五个组件中的一个或多个。
 > 后五个组件的父元素必须是一个 `<fl-container>`
 
-### 例子
+#### 例子
 
 [//]: # (![]&#40;container.png&#41;)
 
@@ -112,7 +117,7 @@ element可将每行划分为24个分栏，而bootstrap是划分为12个分栏，
 vue
 ```vue
 // vue2
-import {FlContainer, FlAside, FlHeader, FlMain, FlFooter, FlNav} from '@ahg0313/free-layout/vue'
+import {FlContainer, FlAside, FlHeader, FlMain, FlFooter, FlNav} from '@ahg0313/free-layout/vue.js'
 
 
 export default {
@@ -121,23 +126,27 @@ export default {
 }
 
 // vue3
-import {FlContainer, FlAside, FlHeader, FlMain, FlFooter, FlNav} from '@ahg0313/free-layout/vue'
+import {FlContainer, FlAside, FlHeader, FlMain, FlFooter, FlNav} from '@ahg0313/free-layout/vue.js'
 ```
 react
 ```jsx
-import {FlContainer, FlAside, FlHeader, FlMain, FlFooter, FlNav} from '@ahg0313/free-layout/react'
+import {FlContainer, FlAside, FlHeader, FlMain, FlFooter, FlNav} from '@ahg0313/free-layout/react/js'
 ```
 
-### 属性
+#### 属性
 
 与`ElementUI Container` 组件保持保持一致
 
+<br/>
+<br/>
+<br/>
 
-# 布局
+### 布局
 参考 [Element-ui Layout 布局](https://element-plus.org/zh-CN/component/layout.html), 与 `element-ui row col` 保持一致
 
 通过 `fl-row` 和 `fl-col` 组件，并通过  `fl-col` 组件的 `span` 属性我们就可以自由地组合布局。
 
+#### 例子
 ```html
 
 <div>
@@ -167,7 +176,7 @@ import {FlContainer, FlAside, FlHeader, FlMain, FlFooter, FlNav} from '@ahg0313/
 vue
 ```vue
 // vue2
-import {FlRow, FlCol} from '@ahg0313/free-layout/vue'
+import {FlRow, FlCol} from '@ahg0313/free-layout/vue.js'
 
 
 export default {
@@ -176,16 +185,50 @@ export default {
 }
 
 // vue3
-import {FlRow, FlCol} from '@ahg0313/free-layout/vue'
+import {FlRow, FlCol} from '@ahg0313/free-layout/vue.js'
 ```
 react
 ```jsx
-import {FlRow, FlCol} from '@ahg0313/free-layout/react'
+import {FlRow, FlCol} from '@ahg0313/free-layout/react.js'
 ```
 
 
 [//]: # (![]&#40;Layout.png&#41;)
 
-### 属性
+#### 属性
 
 不支持`tag`属性，其他与`ElementUI Layout` 组件保持保持一致
+
+## 常量
+### 窗口尺寸
+```javascript
+import {windowSize} from '@ahg0313/free-layout/src/constant/'
+
+console.log(windowSize)
+// xs: {
+//   min: 0,
+//     max: 767
+// },
+// sm: {
+//   min: 768,
+//     max: 991,
+// },
+// md: {
+//   min: 992,
+//     max: 1199
+// },
+// lg: {
+//   min: 1200,
+//     max: 1919
+// },
+// xl: {
+//   min: 1920,
+//     max: Infinity
+// }
+```
+
+## hooks
+vue >= 3.2.0 、react >= 16.8.0
+### 设置窗口尺寸
+> 待开发
+### 监听窗口尺寸变化

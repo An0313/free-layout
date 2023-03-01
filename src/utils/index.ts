@@ -5,5 +5,8 @@ export const classNamespace = (name: string) => {
   return (className: string) => `${namespace}-${className}`
 }
 
-
+// 是否是对象
 export const isObject = (val: any) => val !== null && typeof val === 'object';
+
+// 是否是数字
+export const isNumber = number => /^[0-9]+.?[0-9]*$/.test(number)

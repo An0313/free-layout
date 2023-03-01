@@ -83,11 +83,11 @@ export default defineComponent({
         classList.push(setClassName(`offset-${offset}`))
       }
 
-      if (Number.isInteger(push) && offset > 0) {
+      if (Number.isInteger(push) && push > 0) {
         classList.push(setClassName(`push-${push}`))
       }
 
-      if (Number.isInteger(pull) && offset > 0) {
+      if (Number.isInteger(pull) && pull > 0) {
         classList.push(setClassName(`pull-${pull}`))
       }
 
